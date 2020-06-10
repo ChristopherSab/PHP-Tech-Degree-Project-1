@@ -57,20 +57,49 @@ function getRandomQuote(array $array){
 
     $randomIndex = rand(0, count($array) - 1);
 
-    echo $array[$randomIndex]['quote'];
+    return $array[$randomIndex];
 
 }
 
-getRandomQuote($quotes);
+
+//Create the printQuote funtion
+
+function printQuote(array $array){
 
 
+    $quoteElement = getRandomQuote($array);
+
+    $quoteToDisplay = [];
+
+    if( isset($quoteElement['quote'])){
+        $quoteToDisplay[] = "<p class='quote'>". $quoteElement['quote']. "</p>";
+    } 
+
+    if( isset($quoteElement['source'])){
+        $quoteToDisplay[] = "<p class='source'>". $quoteElement['source'];
+    } else{
+        $quoteToDisplay[] = "<p class='source'>";
+    }
+    
+    if( isset($quoteElement['citation'])){
+        $quoteToDisplay[] = "<span class='citation'>". $quoteElement['citation']. "</span>";
+    } 
+    
+    if( isset($quoteElement['year'])){
+        $quoteToDisplay[] = "<span class='year'>". $quoteElement['year']. "</span>";
+    }
+
+    $quoteToDisplay[] = "</p>";
 
 
+    for($i = 0; $i < count($quoteToDisplay); $i++){
+        echo $quoteToDisplay[$i]. " \r\n ";
+    }
 
+}
 
+printQuote($quotes);
 
-
-// Create the printQuote funtion and name it printQuote
 
 
 
