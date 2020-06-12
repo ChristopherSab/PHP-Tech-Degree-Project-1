@@ -119,11 +119,7 @@ function printQuote(array $array){
     }
 
     //Display Quote Genre
-    if( $quoteElement['genre'] == "Proverb"){
-        $quoteToDisplay[] = "<span class='genre'>". "(" . $quoteElement['genre'] .")" ."</span>";
-    } elseif ($quoteElement['genre'] == "Cliche"){
-        $quoteToDisplay[] = "<span class='genre'>". "(" . $quoteElement['genre'] .")" ."</span>";
-    } elseif($quoteElement['genre'] == "Quote") {
+    if( isset($quoteElement['genre'])){
         $quoteToDisplay[] = "<span class='genre'>". "(" . $quoteElement['genre'] .")" ."</span>";
     }
 
@@ -152,7 +148,8 @@ randomBackgroundColor();
 
 printQuote($quotes);
 
-//To refresh page
+
+//The code below refreshes the PHP page every 10 seconds, displaying a new quote each time
 $seconds = 10;
 header("Refresh: $seconds");
 
