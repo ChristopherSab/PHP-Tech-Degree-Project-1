@@ -67,6 +67,12 @@ body {
     content: ", ";
     font-style: normal;
   }
+
+  .genre {
+    display: block;
+    text-transform: lowercase;
+    font-style: italic;
+  }
   
   #loadQuote {
     position: fixed;
@@ -78,7 +84,7 @@ body {
     border-radius: 4px;
     border: 2px solid #fff;
     color: #fff;
-    background-color: #36b55c;
+    background-color: unset;
     padding: 15px 0;
     transition: .5s ;
   }
