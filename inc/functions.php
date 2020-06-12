@@ -26,7 +26,7 @@ $quotes = array(
 
     [
         "quote" => "What we call success is a tip of the ice-berg, what we don't see is the seed sowing and time spent watering the plants",
-        "source" => "Emily Cadbury",
+        "source" => "E Cadbury",
         "citation" => "Birmingham, UK",
         "year" => "2007"
     ],
