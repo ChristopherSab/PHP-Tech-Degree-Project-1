@@ -84,14 +84,11 @@ $quotes = array(
 function getRandomQuote(array $array){
 
     $randomIndex = rand(0, count($array) - 1);
-
     return $array[$randomIndex];
 
 }
 
-
 //This Function Takes An Unstructured Quote "Array" And Builds It up with HTML to be displayed 
-
 function printQuote(array $array){
 
     $quoteElement = getRandomQuote($array);
@@ -145,9 +142,7 @@ function randomBackgroundColor(){
 }
 
 randomBackgroundColor();
-
 printQuote($quotes);
-
 
 //The code below refreshes the PHP page every 10 seconds, displaying a new quote each time
 $seconds = 10;
